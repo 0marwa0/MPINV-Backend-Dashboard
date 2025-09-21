@@ -281,7 +281,7 @@ export default function DevelopersTable() {
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">Developers</h2>
+        <h2 className="text-xl font-semibold"></h2>
         <div className="flex items-center gap-3">
           <label className="text-sm text-gray-600 hidden md:flex items-center gap-2">
             <span>Rows:</span>
