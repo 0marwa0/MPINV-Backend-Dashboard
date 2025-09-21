@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: app background color to resemble the screenshot */
+@layer base {
+  body { @apply bg-gray-50 text-gray-900; }
+}
