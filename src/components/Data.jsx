@@ -1,4 +1,8 @@
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom'
+import CommunityTable from './data/CommunityTable'
+import SubCommunityTable from './data/SubCommunityTable2'
+import StateTable from './data/StateTable'
+import DevelopersTable from './data/DevelopersTable'
 
 const tabs = [
   { id: 'community', label: 'Community' },
@@ -8,7 +12,6 @@ const tabs = [
 ]
 
 export default function Data() {
-
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">Data</h1>
@@ -43,45 +46,4 @@ export default function Data() {
       </div>
     </div>
   )
-}
-
-import SimpleTable from './shared/SimpleTable'
-
-function CommunityTable() {
-  const columns = [
-    { key: 'id', header: 'ID' },
-    { key: 'name', header: 'Community' },
-    { key: 'projects', header: 'Projects' },
-  ]
-  const rows = []
-  return <SimpleTable columns={columns} rows={rows} />
-}
-
-function SubCommunityTable() {
-  const columns = [
-    { key: 'id', header: 'ID' },
-    { key: 'name', header: 'Sub Community' },
-    { key: 'community', header: 'Parent Community' },
-  ]
-  const rows = []
-  return <SimpleTable columns={columns} rows={rows} />
-}
-
-function StateTable() {
-  const columns = [
-    { key: 'code', header: 'Code' },
-    { key: 'name', header: 'State' },
-  ]
-  const rows = []
-  return <SimpleTable columns={columns} rows={rows} />
-}
-
-function DevelopersTable() {
-  const columns = [
-    { key: 'id', header: 'ID' },
-    { key: 'name', header: 'Developer' },
-    { key: 'projects', header: 'Projects' },
-  ]
-  const rows = []
-  return <SimpleTable columns={columns} rows={rows} />
 }

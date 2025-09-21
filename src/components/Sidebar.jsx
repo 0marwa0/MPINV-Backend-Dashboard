@@ -19,12 +19,10 @@ export default function Sidebar() {
         <nav className="mt-2 flex flex-col items-center gap-5">
           {/* Off-Plan */}
           <NavLink to="/offplan" className="group flex flex-col items-center text-sm font-medium" title="Off-Plan Projects">
-            <span className={`${itemBase} ${cur === 'offplan' ? 'bg-white text-black ring-white/30' : 'bg-white/10 text-white ring-white/10'}`}>
-              {/* construction helmet icon */}
+            <span className={`${itemBase} ${cur === 'offplan' ? 'bg-black text-white ring-white/30' : 'bg-black text-white ring-white/10'}`}>
+              {/* buildings icon */}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                <path d="M4 15v-1a8 8 0 1116 0v1h-2v-1a6 6 0 10-12 0v1H4z" />
-                <rect x="3" y="16" width="18" height="2" rx="1" />
-                <rect x="2" y="18" width="20" height="2" rx="1" />
+                <path d="M3 21h18v-2H3v2zM5 17h3v-3H5v3zm0-5h3V9H5v3zm0-5h3V4H6a1 1 0 00-1 1v2zm5 10h3v-3h-3v3zm0-5h3V9h-3v3zm0-5h3V4h-3v3zM18 17h1a1 1 0 001-1V6a2 2 0 00-2-2h-2v13h2zm-2 0V4h-4v13h4z"/>
               </svg>
             </span>
             <span className={`${labelBase} ${cur === 'offplan' ? 'text-white' : 'text-white/90'}`}>Off-Plan</span>
