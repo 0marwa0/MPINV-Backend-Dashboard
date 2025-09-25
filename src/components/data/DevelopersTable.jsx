@@ -207,12 +207,12 @@ export default function DevelopersTable() {
         fd.append("name", editForm.name.trim());
         fd.append("logo", editForm.logoFile);
         res = await fetch(`/api/developer/${encodeURIComponent(editRow.id)}`, {
-          method: "PUT",
+          method: "PATCH",
           body: fd,
         });
       } else {
         res = await fetch(`/api/developer/${encodeURIComponent(editRow.id)}`, {
-          method: "PUT",
+          method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             name: editForm.name.trim(),

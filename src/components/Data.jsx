@@ -1,15 +1,15 @@
-import { NavLink, Routes, Route, Navigate } from 'react-router-dom'
-import CommunityTable from './data/CommunityTable'
-import SubCommunityTable from './data/SubCommunityTable2'
-import StateTable from './data/StateTable'
-import DevelopersTable from './data/DevelopersTable'
+import { NavLink, Routes, Route, Navigate } from "react-router-dom";
+import CommunityTable from "./data/CommunityTable";
+import SubCommunityTable from "./data/SubCommunityTable";
+import StateTable from "./data/StateTable";
+import DevelopersTable from "./data/DevelopersTable";
 
 const tabs = [
-  { id: 'community', label: 'Community' },
-  { id: 'sub-community', label: 'Sub Community' },
-  { id: 'state', label: 'State' },
-  { id: 'developers', label: 'Developers' },
-]
+  { id: "community", label: "Community" },
+  { id: "sub-community", label: "Sub Community" },
+  { id: "state", label: "State" },
+  { id: "developers", label: "Developers" },
+];
 
 export default function Data() {
   return (
@@ -22,12 +22,22 @@ export default function Data() {
             <NavLink
               key={t.id}
               to={t.id}
-              className={({ isActive }) => `relative px-3 sm:px-4 pt-3 pb-2 text-sm whitespace-nowrap transition-colors ${isActive ? 'text-black font-semibold' : 'text-gray-400 hover:text-gray-600'}`}
+              className={({ isActive }) =>
+                `relative px-3 sm:px-4 pt-3 pb-2 text-sm whitespace-nowrap transition-colors ${
+                  isActive
+                    ? "text-black font-semibold"
+                    : "text-gray-400 hover:text-gray-600"
+                }`
+              }
             >
               {({ isActive }) => (
                 <>
                   {t.label}
-                  <div className={`mx-auto mt-2 mb-[-1px] h-1 rounded-full ${isActive ? 'bg-black w-16' : 'bg-transparent w-16'}`} />
+                  <div
+                    className={`mx-auto mt-2 mb-[-1px] h-1 rounded-full ${
+                      isActive ? "bg-black w-16" : "bg-transparent w-16"
+                    }`}
+                  />
                 </>
               )}
             </NavLink>
@@ -45,5 +55,5 @@ export default function Data() {
         </Routes>
       </div>
     </div>
-  )
+  );
 }

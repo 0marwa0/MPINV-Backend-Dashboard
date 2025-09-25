@@ -1,10 +1,11 @@
-import Sidebar from './components/Sidebar'
-import OffPlanProjects from './components/OffPlanProjects'
-import Enquiries from './components/Enquiries'
-import Data from './components/Data'
-import Jobs from './components/Jobs'
-import { Routes, Route, Navigate } from 'react-router-dom'
-
+import Sidebar from "./components/Sidebar";
+import OffPlanProjects from "./components/OffPlanProjects";
+import Enquiries from "./components/Enquiries";
+import Data from "./components/Data";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Pages from "./components/Pages";
+import Settings from "./components/Settings";
+import Users from "./components/Users";
 export default function App() {
   return (
     <div className="min-h-screen flex">
@@ -16,10 +17,12 @@ export default function App() {
           <Route path="/offplan" element={<OffPlanProjects />} />
           <Route path="/enquiries/*" element={<Enquiries />} />
           <Route path="/data/*" element={<Data />} />
-          <Route path="/jobs/*" element={<Jobs />} />
-          <Route path="*" element={<Navigate to="/offplan" replace />} />
+          <Route path="/Pages/*" element={<Pages />} />
+          <Route path="/Settings/*" element={<Settings />} />
+          <Route path="/Users/*" element={<Users />} />
+          {/* <Route path="*" element={<Navigate to="/offplan" replace />} /> */}
         </Routes>
       </main>
     </div>
-  )
+  );
 }

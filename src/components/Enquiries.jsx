@@ -1,5 +1,7 @@
 import { NavLink, Routes, Route, Navigate } from "react-router-dom";
-
+import BrochureRequestsTable from "./Enquiries/BrochureRequests";
+import ContactUsTable from "./Enquiries/contactTable";
+import OffPlanEnquiryTable from "./Enquiries/OffPlanEnquiryTable";
 const tabs = [
   { id: "contact", label: "Contact Us" },
   { id: "brochure", label: "Brochure Request" },
@@ -45,9 +47,9 @@ export default function Enquiries() {
       <div className="mt-2">
         <Routes>
           <Route index element={<Navigate to="contact" replace />} />
-          <Route path="contact" element={<></>} />
-          <Route path="brochure" element={<></>} />
-          <Route path="property" element={<></>} />
+          <Route path="contact" element={<ContactUsTable />} />
+          <Route path="brochure" element={<BrochureRequestsTable />} />
+          <Route path="property" element={<OffPlanEnquiryTable />} />
         </Routes>
       </div>
     </div>
@@ -55,34 +57,3 @@ export default function Enquiries() {
 }
 
 import SimpleTable from "./shared/SimpleTable";
-
-function ContactUsTable() {
-  const columns = [
-    { key: "name", header: "Name" },
-    { key: "email", header: "Email" },
-    { key: "message", header: "Message" },
-  ];
-  const rows = [];
-  return <SimpleTable columns={columns} rows={rows} />;
-}
-
-function BrochureTable() {
-  const columns = [
-    { key: "name", header: "Name" },
-    { key: "email", header: "Email" },
-    { key: "project", header: "Project" },
-  ];
-  const rows = [];
-  return <SimpleTable columns={columns} rows={rows} />;
-}
-
-function PropertyEnquiryTable() {
-  const columns = [
-    { key: "name", header: "Name" },
-    { key: "phone", header: "Phone" },
-    { key: "property", header: "Property" },
-    { key: "question", header: "Question" },
-  ];
-  const rows = [];
-  return <SimpleTable columns={columns} rows={rows} />;
-}
